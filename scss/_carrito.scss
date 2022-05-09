@@ -1,0 +1,24 @@
+main{
+    .row{
+        #carritoCompras{
+            a{
+                text-decoration: none;
+                font-size: 20px;
+            }           
+        }
+        .totalDeCompra{
+            h5{
+                font-size: 25px;
+            }
+            p{
+                font-size: 20px;
+                font-weight: 600;
+            }
+            #botonFinalizar{
+                float: right;
+            }
+        }
+        
+    }
+    
+}

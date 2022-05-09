@@ -1,0 +1,58 @@
+header{
+    margin-bottom: 20px;
+    .row{
+        div{
+            background-color: #2A2A2A;
+            padding: 0px;
+            height: 90px;
+            display: flex;
+
+            .logo{
+                a{  
+                    width: 170px;
+                    text-decoration: none;
+                    margin-left: 100px;
+                    i{
+                        font-size: 80px;
+                        color: blanchedalmond;
+                        padding-top: 10px;
+                    }
+                }
+            }
+            .buscador{
+                div{
+                    padding: 4% 2%;
+                    width: 70%;
+                    height: 40%;
+                    .inputBuscador{
+                        width: 70%;
+                    }
+                    .botonBuscador{
+                        color: #2A2A2A;
+                        width: 10%;
+                    }
+                }
+                
+            }
+            .zonaCarrito{
+                padding-top: 20px;
+
+                a{
+                    width: 100px;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    i{
+                        color: blanchedalmond;
+                        font-size: 40px;  
+                    }
+                    p{
+                        color: blanchedalmond;   
+                    }
+                }
+                
+            }
+        }
+    }    
+}
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digg | Computación</title>
+    <!--LETRAS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+    <!--LOGOS-->
+    <script src="https://kit.fontawesome.com/052f44ba93.js" crossorigin="anonymous"></script>
+    <!--CDN CSS BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!--MI CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-3 logo">
+                    <a href="../index.html">
+                        <i class="fa-brands fa-digg"></i>
+                        <i class="fa-brands fa-react"></i>
+                    </a>
+                    
+                </div>
+                <div class="col-6 buscador">
+                    <div class="input-group rounded">
+                        <input type="search" class="form-control rounded inputBuscardor" placeholder="buscador" aria-label="Search" aria-describedby="search-addon" />
+                        <button class="botonBuscador input-group-text border-0" id="search-addon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                      </div>
+                    
+                </div>
+                <div class="col-3 zonaCarrito">
+                    <a href="carrito.html" id="carrito">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p>Carrito</p>  
+                    </a>         
+            </div>
+                
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-lg-8" id="carritoCompras">
+                
+            </div>
+
+            
+            <div class="col-sm-4 totalDeCompra">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Total de la compra</h5>
+                    <p class="card-text" id="precioFinal"></p>
+                    <a href="#" class="btn btn-primary" id="botonFinalizar">Finalizar compra</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+   
+
+    <!--INICIO DE FOOTER-->
+    <footer class=" footer container-fluid">
+        <div class="row">
+            
+            <div class="col-lg-3 col-md-6 col-6">
+                <a  class="footer_contacto" href="#">CONTACTO</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6"">
+                <h5>DESARROLLADO CON</h5>
+                <div id="logo_lenguajes">
+                    <img src="../assets/img/html5-css.png" alt="Creado con html y Css">
+                </div>   
+            </div> 
+            <!--NAVEGADORES-->
+            <div class="col-lg-3 col-md-6 col-6"">
+                <h5>OPTIMISADO PARA</h5>
+                <div class="browsers">
+                    <a href="#">
+                        <img src="../assets/img/firefox-icon.png" alt="firefox" title="Firefox">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/img/chrome.png" alt="chrome" title="Chrome">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/img/safari.png" alt="safari" title="Safari">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/img/Opera_256x256.png" alt="opera" title="opera">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/img/android.png" alt="android" title="android">
+                    </a>
+                </div>
+            </div> 
+            <!--AUTOR-->
+            <div class="col-lg-3 col-md-6 col-6"">
+                <h5>AUTOR</h5>
+                <p> Copyright © Martin, Juan Ignacio</p>
+            </div>
+        </div>
+    </footer>
+       <!-- FIN DE FOOTER-->
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="../js/carrito.js"></script>
+    <script src="../js/script.js"></script>
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
