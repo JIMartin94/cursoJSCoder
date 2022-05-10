@@ -159,19 +159,6 @@ carritoCompras.addEventListener("input", e => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 let botonFinalizar = document.getElementById("botonFinalizar");
 
 botonFinalizar.addEventListener("click", () => {

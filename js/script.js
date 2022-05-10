@@ -94,11 +94,8 @@ const buscarProd = (id,lista) =>{
 let div_productos = document.getElementById("productos");
 div_productos.addEventListener("click", e => {
     let id = clickearId(e);
-    if(buscarProd(id,arrayCarrito)){
-        alert("El producto ya esta en el carrito")
-    }else{
-        arrayCarrito.push(buscarProd(id,arrayProductos));
-    }
+
+    (buscarProd(id,arrayCarrito)) ? alert("El producto ya esta en el carrito") : arrayCarrito.push(buscarProd(id,arrayProductos));
     
 });
 
