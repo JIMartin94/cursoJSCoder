@@ -26,11 +26,13 @@ const notebookAsus = new Producto(8,"Notebook ASUS I3-1005GI 4GB 1TB 15.6 1920X1
 arrayProductos.push(mouseLogi,microfonoAsus,auriculares,monitor,routerGaming,gabinete,tabletSamsung,notebookAsus);
 
 // FUNCION PARA MOSTRAR TODOS LOS PRODUCTOS
-const mostrarProductos = () =>{
+const mostrarProductos = (arrayProductos) =>{
+
+    let div_productos = document.getElementById("productos");
+    div_productos.innerHTML = " ";
 
     for(item of arrayProductos){
 
-    let div_productos = document.getElementById("productos");
 
     let div_col = document.createElement("div");
     div_col.className = "col-lg-3";
@@ -70,8 +72,31 @@ const mostrarProductos = () =>{
     }
 }
 
-mostrarProductos();
+mostrarProductos(arrayProductos);
 
+const encontrarPalabra = (palabra,frase) =>{
+
+    let palabras = frase.split(' ');
+    return palabras.indexOf(palabra) != -1;
+}
+
+let buscarp = document.getElementById("inputBuscardor");
+
+buscarp.addEventListener("input", () =>{
+    let arrayP = [];
+    for(let prod of arrayProductos){
+        if(encontrarPalabra((buscarp.value).toUpperCase(),(prod.nombre).toUpperCase())){
+            console.log("encontro");
+             arrayP.push(prod);
+             mostrarProductos(arrayP);
+             return 0;
+        }else{
+            mostrarProductos(arrayProductos);
+        }
+    }
+
+    
+});
 
 //OBTENGO EL ID DE CADA BOTON
 const clickearId = e => {
@@ -91,22 +116,45 @@ const buscarProd = (id,lista) =>{
 }
 
 //GUARDO CADA PRODUCTO EN EL ARRAY
-let div_productos = document.getElementById("productos");
-div_productos.addEventListener("click", e => {
+let row_productos = document.querySelector(".row_productos");
+let carrito_cant = document.getElementById("carrito_cant");
+
+row_productos.addEventListener("click", e => {
     let id = clickearId(e);
 
-    (buscarProd(id,arrayCarrito)) ? alert("El producto ya esta en el carrito") : arrayCarrito.push(buscarProd(id,arrayProductos));
+    if(buscarProd(id,arrayCarrito)){
+        Swal.fire({
+            title: "Info",
+            text: "El producto ya esta en el carrito!",
+            icon: "info",
+            timer: 3000
+        })
+    }else{
+        arrayCarrito.push(buscarProd(id,arrayProductos));
+        Toastify({
+            text: "Agregado al carrito", 
+            className: "info",
+            duration: 3000,  
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            }
+          }).showToast();
+          carrito_cant.innerHTML =  arrayCarrito.length;
+    }
     
 });
-
-
 
 //CLICKEO EL CARRITO Y GUARDO EL ARRAY DE PRODUCTOS 
 let carrito = document.getElementById("carrito");
 carrito.addEventListener("click", () => {
 
     if(arrayCarrito.length == 0){
-        alert("El carrito esta vacio!");
+        Swal.fire({
+            title: "Error",
+            text: "El carrito se encuentra vacio!",
+            icon: "error",
+            timer: 3000
+        })
     }else{
         carrito.href="view/carrito.html";
         localStorage.setItem("productosCarrito", JSON.stringify(arrayCarrito));  
