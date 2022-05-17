@@ -160,8 +160,8 @@ botonFinalizar.addEventListener("click", () => {
         icon: "success",
         confirmButtonText: "Terminar",
 
-     }).then( () =>{
-        botonFinalizar.href= "../index.html"
+    }).then( () =>{
+        window.location.href = '../index.html';
      });
     
 });
