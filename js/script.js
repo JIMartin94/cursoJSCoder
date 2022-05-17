@@ -87,15 +87,10 @@ buscarp.addEventListener("input", () =>{
     for(let prod of arrayProductos){
         if(encontrarPalabra((buscarp.value).toUpperCase(),(prod.nombre).toUpperCase())){
             console.log("encontro");
-             arrayP.push(prod);
-             mostrarProductos(arrayP);
-             return 0;
-        }else{
-            mostrarProductos(arrayProductos);
-        }
+             arrayP.push(prod);        
+        }       
     }
-
-    
+    return arrayP.length == 0 ? mostrarProductos(arrayProductos) : mostrarProductos(arrayP);
 });
 
 //OBTENGO EL ID DE CADA BOTON
