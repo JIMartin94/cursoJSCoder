@@ -4,9 +4,15 @@ main{
             a{
                 text-decoration: none;
                 font-size: 20px;
-            }           
+            }   
+            .eliminar{
+                color: rgb(216, 19, 19);
+                float: right;
+                cursor: pointer;
+            }        
         }
         .totalDeCompra{
+            
             h5{
                 font-size: 25px;
             }

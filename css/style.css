@@ -139,6 +139,11 @@ main .row #carritoCompras a {
   text-decoration: none;
   font-size: 20px; }
 
+main .row #carritoCompras .eliminar {
+  color: #d81313;
+  float: right;
+  cursor: pointer; }
+
 main .row .totalDeCompra h5 {
   font-size: 25px; }
 

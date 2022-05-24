@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
     <!--LOGOS-->
-    <script src="https://kit.fontawesome.com/052f44ba93.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/052f44ba93.js" crossorigin="anonymous"></script>    
     <!--CDN CSS BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -29,13 +29,7 @@
                     
                 </div>
                 <div class="col-6 buscador">
-                    <div class="input-group rounded">
-                        <input type="search" class="form-control rounded inputBuscardor" placeholder="buscador" aria-label="Search" aria-describedby="search-addon" />
-                        <button class="botonBuscador input-group-text border-0" id="search-addon">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                      </div>
-                    
+                                        
                 </div>
                 <div class="col-3 zonaCarrito">
                     <a href="carrito.html" id="carrito">
@@ -50,9 +44,10 @@
     </header>
 
     <main class="container">
-        <div class="row">
+        <div class="row" id="row_carrito">
             <div class="col-lg-8" id="carritoCompras">
                 
+
             </div>
 
             
@@ -61,11 +56,11 @@
                   <div class="card-body">
                     <h5 class="card-title">Total de la compra</h5>
                     <p class="card-text" id="precioFinal"></p>
+                    <a href="../index.html"type="button" class="btn btn-dark">Seguir comprando</a>
                     <a href="#" class="btn btn-primary" id="botonFinalizar">Finalizar compra</a>
                   </div>
                 </div>
-              </div>
-            </div>
+            </div>        
         </div>
     </main>
    
@@ -135,6 +130,5 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- mi script-->
     <script src="../js/carrito.js"></script>
-    <script src="../js/script.js"></script>
 </body>
 </html>
