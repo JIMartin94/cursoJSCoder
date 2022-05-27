@@ -3,7 +3,7 @@ let arrayCarrito = [];
 
 const obtenerProductos = async () =>{
 
-    const responseProductos = await fetch("/jsons/productos.json");
+    const responseProductos = await fetch("jsons/productos.json");
 
     const productos = await responseProductos.json();
 
@@ -110,12 +110,12 @@ row_productos.addEventListener("click", e => {
             style: {
               background: "linear-gradient(to right, #00b09b, #96c93d)",
             }
-          }).showToast();
-          let cantidad = 0;
-          for(let item of arrayCarrito){
-              cantidad +=  parseInt(item.cantidad);
-          }
-          carrito_cant.innerHTML =  cantidad;
+        }).showToast();
+        let cantidad = 0;
+        for(let item of arrayCarrito){
+            cantidad +=  parseInt(item.cantidad);
+        }
+        carrito_cant.innerHTML =  cantidad;
     }
 
 });
