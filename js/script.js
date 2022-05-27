@@ -1,6 +1,18 @@
 const arrayProductos = [];
 let arrayCarrito = [];
 
+const obtenerProductos = async () =>{
+
+    const responseProductos = await fetch("/jsons/productos.json");
+
+    const productos = await responseProductos.json();
+
+    for(let producto of productos){
+        arrayProductos.push(producto);
+    }
+    mostrarProductos(arrayProductos);
+}
+
 // FUNCION PARA MOSTRAR TODOS LOS PRODUCTOS
 const mostrarProductos = (arrayProductos) =>{
 
@@ -35,17 +47,7 @@ const mostrarProductos = (arrayProductos) =>{
     }
 }
 
-const obtenerProductos = async () =>{
 
-    const responseProductos = await fetch("jsons/productos.json");
-
-    const productos = await responseProductos.json();
-
-    for(let producto of productos){
-        arrayProductos.push(producto);
-    }
-    mostrarProductos(arrayProductos);
-}
 
 obtenerProductos();
 
@@ -99,7 +101,7 @@ row_productos.addEventListener("click", e => {
             icon: "info",
             timer: 3000
         })
-    }else{
+    }else if(id != null){
         arrayCarrito.push(buscarProd(id,arrayProductos));
         Toastify({
             text: "Agregado al carrito",
